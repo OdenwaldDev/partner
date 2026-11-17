@@ -1,0 +1,320 @@
+(function(){ try{ const s=document.createElement('style'); s.id='svm71css'; s.textContent="/* Beta 0.76 · Termine für Abteilungen, Mithelfen, Werbebild, Rückmeldungen. Ruhig: flache Flächen, eine Akzentfarbe, Tipp-Ziele 44 */\n.kal-hg{display:inline-block;align-self:flex-start;width:fit-content;margin-top:6px;font-style:normal;font-size:12.5px;font-weight:600;color:var(--brand2);background:var(--brandSoft);border-radius:99px;padding:3px 9px}\n.kal-hg.ich{color:var(--ink2);background:var(--surface2)}\n.kal-f2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}\n.kal-f2>.field,.kal-f2>label{min-width:0}\n.kal-f2 .kal-sicht>div{flex-wrap:wrap}\n.kal-f2 .kal-w{grid-column:1/-1}\n@media (max-width:520px){.kal-f2{grid-template-columns:minmax(0,1fr)}}\n.kal-gast{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}\n.kal-gast:empty{display:none}\n.kal-gp{display:inline-flex;align-items:center;gap:2px;padding:0 2px 0 12px;min-height:36px;border-radius:99px;background:var(--surface2);border:1px solid var(--line);font-size:14px}\n.kal-gp button{all:unset;position:relative;cursor:pointer;width:44px;height:44px;margin:-4px -4px -4px 0;display:grid;place-items:center;color:var(--ink3)}\n.kal-gp button svg{width:14px;height:14px}\n.kal-gl{display:flex;flex-direction:column;gap:4px;margin-top:6px}\n.kal-gz{all:unset;position:relative;cursor:pointer;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:10px;background:var(--surface2);font-size:15px}\n.kal-gz svg{width:16px;height:16px;color:var(--brand2)}\n.kal-ag{border:1px solid var(--line);border-radius:12px;margin:8px 0;background:var(--surface2)}\n.kal-ag summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:2px;padding:12px 14px;min-height:44px;justify-content:center}\n.kal-ag summary::-webkit-details-marker{display:none}\n.kal-ag summary small{color:var(--ink2);font-size:13px}\n.kal-am{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px}\n.kal-zeile{display:flex;gap:8px;flex-wrap:wrap;padding:12px 14px}\n.kal-zeile select,.kal-zeile input{flex:1 1 200px;min-height:44px}\n.kal-zeile .btn{min-height:44px}\n.kal-helf{margin:14px 0 4px;border-top:1px solid var(--line);padding-top:12px}\n.kal-hs{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}\n.kal-hs:last-child{border-bottom:0}\n.kal-hs>div{display:flex;flex-direction:column;gap:2px;min-width:0}\n.kal-hs span{font-size:14.5px}\n.kal-hs small{font-size:13px;color:var(--ink2)}\n.kal-hs .btn{min-height:44px;flex:0 0 auto}\n\n/* Werbebild */\n.wb{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:18px;align-items:start}\n@media (max-width:700px){.wb{grid-template-columns:1fr}}\n.wb-vor{background:var(--surface2);border-radius:14px;padding:10px;display:grid;place-items:center}\n.wb-vor canvas{width:100%;height:auto;max-height:38vh;object-fit:contain;border-radius:6px;display:block}\n.wb-ein{display:flex;flex-direction:column;gap:12px;min-width:0}\n.wb-seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}\n.wb-seg button{all:unset;position:relative;cursor:pointer;box-sizing:border-box;display:flex;flex-direction:column;gap:2px;padding:10px;min-height:52px;border-radius:10px;border:1px solid var(--line);background:var(--surface2)}\n.wb-seg button b{font-size:14.5px}\n.wb-seg button small{font-size:12px;color:var(--ink2)}\n.wb-seg button[aria-pressed=\"true\"]{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}\n.wb-fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:6px}\n.wb-f{all:unset;position:relative;cursor:pointer;box-sizing:border-box;aspect-ratio:9/16;max-height:110px;border-radius:8px;overflow:hidden;border:2px solid transparent;background:var(--surface2);display:grid;place-items:center;font-size:12.5px;color:var(--ink2);text-align:center}\n.wb-f img{width:100%;height:100%;object-fit:cover;display:block}\n.wb-f.on{border-color:var(--brand)}\n.wb-eig{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}\n.wb-eig svg{width:20px;height:20px}\n.wb-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}\n\n/* Rückmeldungen */\n.rm-seg{margin:12px 0}\n.rm-zahl{font-style:normal;font-size:12px;font-weight:700;background:var(--brand);color:#fff;border-radius:99px;padding:1px 7px;margin-left:4px}\n.rm-art{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px}\n.rm-z{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0;background:var(--surface2)}\n.rm-z p{margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}\n.rm-k{display:flex;align-items:center;gap:8px;flex-wrap:wrap}\n.rm-k small{color:var(--ink2);font-size:13px;margin-left:auto}\n.rm-st{font-style:normal;font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--line);color:var(--ink2)}\n.rm-st.s-neu{background:var(--brandSoft);color:var(--brand2)}\n.rm-st.s-umgesetzt{background:rgba(34,197,94,.16);color:#16a34a}\n.rm-ant{background:var(--brandSoft);border-radius:8px;padding:8px 10px}\n.rm-meta{display:block;margin-top:6px;color:var(--ink3);font-size:12.5px}\n.rm-bear{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}\n.rm-bear select{min-height:44px;flex:0 0 auto}\n.rm-bear input{min-height:44px;flex:1 1 180px}\n.rm-bear .btn{min-height:44px}\n.rm-badge[hidden]{display:none!important}\n\n/* 0.76 Prüfstraße Bedienung */\nhtml body:not(#_).kal-an main{padding-bottom:calc(170px + env(safe-area-inset-bottom))!important}\n.kal-sicht .kal-chip,.wb-chips .kal-chip,.rm-art .kal-chip{min-height:44px}\n.rm-seg button{min-height:44px}\n.kal-sieht{margin:10px 0 0;font-size:14px;color:var(--ink2)}\n.kal-shin{margin:0 0 8px}\n.kal-zeile input,.kal-zeile select,.rm-bear input,.rm-bear select{box-sizing:border-box;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:inherit;padding:0 12px;font:inherit;font-size:16px}\n.kal-ag summary{position:relative;padding-right:40px}\n.kal-ag summary::after{content:'';position:absolute;right:16px;top:50%;width:8px;height:8px;border:solid var(--ink3);border-width:0 2px 2px 0;transform:translateY(-70%) rotate(45deg)}\n.kal-ag[open] summary::after{transform:translateY(-30%) rotate(-135deg)}\n#moreSheet .rm-sheet{background:var(--surface2)!important;border:1px solid var(--line)!important;box-shadow:none!important;background-image:none!important}\n"; document.head.appendChild(s); }catch(e){} })();
+(function(){ try{ const s=document.createElement('style'); s.id='svm69css'; s.textContent="/* Beta 0.75 · Veranstaltungen und Export. Ruhig wie 0.74: Flächen, eine Kante, Vereinsblau als Akzent, Orange nur für „frei“. */\n.vst-kopf{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:2px 2px 14px}\n.vst-kopf h2{margin:0;font-size:24px;letter-spacing:-.02em}\n.vst-kopf p{margin:4px 0 0;color:var(--ink2);max-width:60ch;line-height:1.45;font-size:14px}\n.vst-liste{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}\n.vst-liste.alt{opacity:.85}\n.vst-k{all:unset;box-sizing:border-box;display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 14px;min-height:64px;\n  background:var(--surface);border:1px solid var(--line);border-radius:14px;cursor:pointer;color:var(--ink)}\n.vst-k:hover{border-color:var(--brand2)}\n.vst-k:focus-visible{outline:2px solid var(--brand2);outline-offset:2px}\n.vst-k.ab .vst-kt>b{text-decoration:line-through;text-decoration-thickness:1px}\n.vst-kd{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface2);border-radius:10px;height:52px}\n.vst-kd b{font-size:15px;font-weight:750;font-variant-numeric:tabular-nums}\n.vst-kd small{font-size:11px;color:var(--ink2);text-transform:uppercase;letter-spacing:.05em}\n.vst-kt{min-width:0;display:flex;flex-direction:column;gap:3px}\n.vst-kt>b{font-size:15.5px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}\n.vst-kt>small{color:var(--ink2);font-size:13px}\n.vst-kk{color:var(--ink3)!important;font-size:12.5px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}\n.vst-ks{display:flex;flex-direction:column;align-items:flex-end;gap:4px}\n.vst-ks small{font-size:12px;color:var(--brand2)}\n.vst-ks>svg{width:16px;height:16px;color:var(--ink3)}\n.vst-st{font-style:normal;font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--surface2);color:var(--ink2);white-space:nowrap}\n.vst-st.s-planung{background:var(--brandSoft);color:var(--brand2)}\n.vst-st.s-laeuft{background:rgba(34,197,94,.14);color:#4ade80}\n.vst-st.s-abgesagt{background:rgba(240,82,82,.12);color:#fca5a5}\nhtml[data-theme=\"hell\"] body .vst-st.s-laeuft{color:#166534}\nhtml[data-theme=\"hell\"] body .vst-st.s-abgesagt{color:#991b1b}\nhtml[data-theme=\"hell\"] body .vst-st.s-planung{color:var(--brand)}\n.vst-bal{height:5px;border-radius:9px;background:var(--surface3,rgba(148,163,196,.14));overflow:hidden;margin-top:4px;max-width:260px}\n.vst-bal i{display:block;height:100%;background:var(--brand2);border-radius:9px}\n.vst-bz{font-size:12px!important;color:var(--ink2)!important}\n.vst-vor{all:unset;cursor:pointer;color:var(--brand2);font-weight:600;font-size:14px;padding:12px 4px;min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}\n.vst-leer b{display:block;font-size:16px;margin-bottom:6px}\n.vst-leer p{margin:0;color:var(--ink2);line-height:1.5}\n.vst-zur{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:var(--brand2);font-weight:600;font-size:14px;min-height:44px;margin:0 0 6px}\n.vst-zur svg{width:16px;height:16px;transform:rotate(180deg)}\n.vst-head h2{margin:0;font-size:22px;letter-spacing:-.02em;text-wrap:balance}\n.vst-h1{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}\n.vst-h1 p{margin:4px 0 0;color:var(--ink2);font-size:14px}\n.vst-lt{font-size:13px!important}\n.vst-bes{margin:12px 0 0;line-height:1.5;color:var(--ink);white-space:pre-wrap}\n.vst-zahlen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}\n.vst-zahlen>div{background:var(--surface2);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px}\n.vst-zahlen b{font-size:20px;font-variant-numeric:tabular-nums}\n.vst-zahlen b small{font-size:13px;color:var(--ink2);font-weight:600}\n.vst-zahlen span{font-size:13px;color:var(--ink2)}\n.vst-akt{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}\n.vst-akt .btn{min-height:44px!important}\n.vst-seg{margin:12px 0}\n.vst-seg button{min-height:44px}\n.vst-b h3,.vst-kinder h3{margin:0;font-size:16px}\n.vst-bk{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin-bottom:10px}\n.vst-bk small{color:var(--ink2);font-size:12.5px}\n.vst-bk p{margin:6px 0 0;color:var(--ink2);font-size:13.5px}\n.vst-nix{color:var(--ink3);font-size:13.5px;margin:4px 0}\n.vst-s{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;padding:10px 0;border-top:1px solid var(--line)}\n.vst-sk{display:flex;flex-direction:column;gap:2px;min-width:0}\n.vst-sk b{font-size:14px;font-variant-numeric:tabular-nums}\n.vst-sk span{font-size:13.5px;color:var(--ink)}\n.vst-sk small{font-size:12.5px;color:var(--ink2)}\n.vst-sb{all:unset;cursor:pointer;width:44px;height:44px;display:grid;place-items:center;border-radius:10px;color:var(--ink2);grid-row:1;grid-column:2}\n.vst-sb svg{width:18px;height:18px}\n.vst-sp{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px}\n.vst-p{display:inline-flex;align-items:center;gap:2px;padding:0 4px 0 10px;min-height:32px;border-radius:99px;background:var(--surface2);border:1px solid var(--line);font-size:13px}\n.vst-p.hp{border-style:dashed}\n.vst-p button{all:unset;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;color:var(--ink3)}\n.vst-p button svg{width:14px;height:14px}\n.vst-frei{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:0 12px;min-height:32px;border-radius:99px;border:1px dashed var(--accent);color:var(--accent);font-size:13px;font-weight:600}\n.vst-frei svg{width:14px;height:14px}\n.vst-frei.aus{cursor:default}\n.vst-voll{font-size:12.5px;color:var(--ink3);align-self:center}\n.vst-add{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:var(--brand2);font-weight:600;font-size:14px;min-height:44px;margin-top:6px}\n.vst-add svg{width:16px;height:16px}\n.vst-plus{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 18px}\n.vst-plus .btn{min-height:44px!important}\n.vst-kz{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) 120px 16px;align-items:center;gap:10px;width:100%;padding:10px 0;border-top:1px solid var(--line);min-height:52px}\n.vst-kz span{display:flex;flex-direction:column;min-width:0}\n.vst-kz b{font-size:14.5px}\n.vst-kz small{font-size:12.5px;color:var(--ink2)}\n.vst-kz>svg{width:16px;height:16px;color:var(--ink3)}\n.vst-kz .vst-bz{display:none}\n.vst-form{display:flex;flex-direction:column;gap:12px;margin-top:14px}\n.vst-f{display:flex;flex-direction:column;gap:6px;min-width:0}\n.vst-f label{font-size:12.5px;font-weight:650;color:var(--ink2)}\n.vst-f input,.vst-f select,.vst-f textarea{font:inherit;font-size:16px;min-height:44px;padding:10px 12px;border-radius:11px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);box-sizing:border-box;width:100%}\n.vst-f textarea{min-height:80px;resize:vertical;line-height:1.45}\n.vst-zwei{display:grid;grid-template-columns:1fr 1fr;gap:10px}\n.vst-zeile{display:flex;gap:8px}\n.vst-zeile input{flex:1}\n.vst-chk{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.4;min-height:44px}\n.vst-chk input{width:22px;height:22px;margin-top:1px;flex:none}\n.vst-pw{display:flex;flex-direction:column;gap:6px;max-height:46vh;overflow:auto;margin:10px 0}\n.vst-pw h4{margin:8px 2px 2px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3)}\n.vst-pz{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:2px;padding:10px 12px;min-height:52px;border-radius:11px;background:var(--surface2);border:1px solid var(--line)}\n.vst-pz:hover{border-color:var(--brand2)}\n.vst-pz[hidden]{display:none}\n.vst-pz b{font-size:14.5px}\n.vst-pz small{font-size:12.5px;color:var(--ink2)}\n.vst-hinw b{display:block;margin-bottom:4px}\n.vst-hinw p{margin:0 0 10px;color:var(--ink2);line-height:1.45}\n.vst-hinw.ok{border-color:rgba(34,197,94,.35)!important}\n.vst-hz{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}\n.vst-hz>div:first-child{display:flex;flex-direction:column;min-width:0}\n.vst-hz b{font-size:14.5px}\n.vst-hz small{font-size:12.5px;color:var(--ink2)}\n.vst-hz.drin small{color:#4ade80}\nhtml[data-theme=\"hell\"] body .vst-hz.drin small{color:#166534}\n.vst-ha{display:flex;gap:6px;flex:none}\n.vst-ha .btn{min-height:40px!important}\n.vst-tz{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}\n.vst-tz>div{display:flex;flex-direction:column;min-width:0}\n.vst-tz small{font-size:12.5px;color:var(--ink2)}\n.vst-mneu{border-top:1px solid var(--line);padding-top:12px}\n.vst-cp{display:flex;flex-direction:column;padding:8px 0;border-top:1px solid var(--line)}\n.vst-cp small{color:var(--ink2);font-size:12.5px}\n.vst-txt{width:100%;box-sizing:border-box;font:inherit;font-size:14px;line-height:1.5;padding:12px;border-radius:11px;border:1px solid var(--line);background:var(--surface2);color:var(--ink);margin-top:12px}\n@media (max-width:520px){ .vst-k{grid-template-columns:46px minmax(0,1fr) auto;padding:10px 12px} .vst-kd{height:46px} .vst-ha .btn{padding:0 10px!important} }\n\n/* Export */\n.ex-g{margin:18px 2px 8px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3)}\n.ex-liste{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}\n.ex-q{all:unset;box-sizing:border-box;cursor:pointer;display:flex!important;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px!important;margin:0!important;min-height:72px}\n.ex-q>span{display:flex;flex-direction:column;gap:3px;min-width:0}\n.ex-q b{font-size:15px}\n.ex-q small{font-size:13px;color:var(--ink2);line-height:1.4}\n.ex-q>svg{width:16px;height:16px;color:var(--ink3);flex:none}\n.ex-fs{display:flex!important;flex-direction:row!important;gap:4px;flex-wrap:wrap;margin-top:4px}\n.ex-fs i{font-style:normal;font-size:11.5px;font-weight:650;padding:2px 7px;border-radius:99px;background:var(--surface2);color:var(--ink2)}\n.ex-fmt{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:16px}\n.ex-f{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:2px;padding:12px;min-height:60px;border-radius:12px;border:1px solid var(--line);background:var(--surface2)}\n.ex-f b{font-size:15px}\n.ex-f span{font-size:12.5px;color:var(--ink2)}\n.ex-f.on{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}\n.ex-f:focus-visible{outline:2px solid var(--brand2);outline-offset:2px}\n.ex-stat{min-height:22px;margin-top:12px;font-size:13.5px;color:var(--ink2)}\n\n/* 0.75 Prüfstraße: all:unset setzt auch position zurück; sonst wird eine unsichtbare Tippfläche riesig */\n.vst-k,.vst-vor,.vst-zur,.vst-sb,.vst-p,.vst-p button,.vst-frei,.vst-add,.vst-kz,.vst-pz,.ex-q,.ex-f{position:relative}\n.vst-p button{min-width:44px;min-height:44px;margin:-6px -4px -6px -6px}\n.vst-p button:disabled{opacity:.4}\n.vst-f[hidden],.vst-pz[hidden]{display:none!important}\n.ex-hw{margin:12px 0 0;font-size:13px;color:var(--ink2)}\n.ex-kt{padding-right:44px;min-width:0}\n.ex-kt h2{overflow-wrap:anywhere}\n.ex-f.on b::after{content:'';display:inline-block;width:6px;height:11px;margin-left:8px;border:solid var(--brand);border-width:0 2px 2px 0;transform:rotate(45deg) translateY(-2px)}\n.vst-akt .btn{flex:1 1 auto}\n"; document.head.appendChild(s); }catch(e){} })();
+(function(){ try{ const s=document.createElement('style'); s.id='svm58css'; s.textContent="/* Heute: Liste der häufigsten Bereiche je Rolle, im Stil einer iPhone-Einstellungsliste */\n.ht{margin:4px 0 18px}\n.ht-h{font-size:20px;font-weight:750;letter-spacing:-.02em;margin:0 4px 10px;color:var(--ink);text-wrap:balance}\n.ht-liste{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}\n.ht-z,.ht-mehr{display:flex;align-items:center;gap:14px;width:100%;min-height:60px;padding:10px 14px;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent}\n.ht-z+.ht-z::before{content:\"\";position:absolute;top:0;left:58px;right:0;height:1px;background:var(--line)}\n.ht-z:active,.ht-mehr:active{background:var(--card2)}\n@media (hover:hover){.ht-z:hover,.ht-mehr:hover{background:var(--card2)}}\n.ht-z:focus-visible,.ht-mehr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}\n.ht-ic{flex:none;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;background:var(--c);color:#fff}\n.ht-ic svg{width:18px;height:18px;stroke-width:2.1}\n.ht-tx{flex:1;min-width:0;display:grid;gap:2px}\n.ht-tx b{font-size:16px;font-weight:620;letter-spacing:-.01em;line-height:1.25}\n.ht-tx small{font-size:13.5px;color:var(--ink2);line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}\n.ht-tx small.ht-heute{color:var(--accent);font-weight:600}\n.ht-n{flex:none;min-width:24px;height:24px;padding:0 7px;border-radius:12px;display:grid;place-items:center;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;background:var(--card2);color:var(--ink2)}\n.ht-n.rot{background:var(--red);color:#fff}\n.ht-pf{flex:none;color:var(--ink3);display:grid;place-items:center;transition:transform .2s var(--ease,ease)}\n.ht-pf svg{width:16px;height:16px;stroke-width:2.4}\n.ht-pf.auf{transform:rotate(90deg)}\n/* Zugeklappte Scouting-Listen */\n.ht-mehr{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);margin:4px 0 16px;justify-content:space-between}\n.ht-mehr span:first-child{display:grid;gap:2px}\n.ht-mehr b{font-size:16px;font-weight:620}\n.ht-mehr small{font-size:13.5px;color:var(--ink2)}\n#panel-home.ht-kompakt:not(.ht-offen)>:is(#vrHome,#homeTiles,#homeKand,#svAct,#homeCrm,.sechead,#homeFocus,#homeWechsel,#homeGems,.frow,#homePress){display:none!important}\n/* Die neue Liste ersetzt die Schnellknöpfe im Cockpit, Hinweise und Lagebild bleiben */\n#panel-home.ht-kompakt #svCockpit .svc-acts,#panel-home.ht-kompakt #svCockpit .svc-top{display:none!important}\n@media (prefers-reduced-motion:reduce){.ht-pf{transition:none}}\n/* 0.74: Leerzustand für Jugendtrainer ohne Mannschaft */\n.ht-leer{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:var(--card);color:var(--ink)}\n.ht-leer b{display:block;font-size:16px;margin-bottom:6px}\n.ht-leer p{margin:0;color:var(--ink2);line-height:1.5;font-size:14.5px}\n.ht-leer+.ht-liste{margin-top:10px}\n"; document.head.appendChild(s); }catch(e){} })();
+/* =====================================================================
+   Sportzentrale Beta 0.62 · Feinschliff nach Apples Human Interface Guidelines, für die ganze App
+   - Tippflächen: alles, was man antippen kann, ist mindestens 44 x 44 Punkt groß. Kleine Knöpfe behalten
+     ihr Aussehen, bekommen aber eine unsichtbar vergrößerte Tippfläche (wie bei iOS).
+   - Eingabefelder: am Handy mindestens 44 hoch und 16px Schrift (sonst zoomt das iPhone beim Antippen).
+   - VoiceOver: Eingabefelder ohne Beschriftung bekommen einen Namen aus Platzhalter, Spaltenkopf oder Text davor.
+   - Dialoge: „Abbrechen“ links, die Hauptaktion rechts (wie bei iOS), wenn die Knöpfe nebeneinander stehen.
+   - Textgröße: Wer am iPhone größeren Text eingestellt hat, bekommt die App entsprechend größer (abschaltbar).
+   - Kontrast der schwächsten Textfarbe angehoben, weniger Bewegung respektiert (Datei svm59.css).
+   - Text unter 11 Punkt hebt der Build an (build_v3.py, mind11).
+   ===================================================================== */
+const AP={t:null,mo:null,faktor:1,gross:new WeakSet(),text:new WeakSet()};
+const apGrob=()=>{ try{ return matchMedia('(pointer:coarse)').matches; }catch(e){ return false; } };
+const apSicht=e=>{ if(!e.isConnected)return false; const r=e.getBoundingClientRect(); return r.width>1&&r.height>1; };
+
+// ---------- Tippflächen ----------
+function apTippflaechen(root){
+  if(!apGrob())return;
+  (root||document).querySelectorAll('button, a[href], [role=button], summary, [role=tab], [role=radio], [role=checkbox]').forEach(e=>{
+    if(e.tagName==='A'&&!e.classList.contains('btn')&&getComputedStyle(e).display==='inline'&&e.parentElement&&/^(P|LI|SPAN|SMALL|TD)$/.test(e.parentElement.tagName)&&e.parentElement.textContent.trim().length>e.textContent.trim().length+3)return;   // Link mitten im Text
+    if(e.classList.contains('ap-hit')||e.dataset.apHit==='0'||!apSicht(e))return;
+    if(AP.gross.has(e))return; const r=e.getBoundingClientRect(); if(r.width>=44&&r.height>=44){ AP.gross.add(e); return; }
+    let after='none'; try{ after=getComputedStyle(e,'::after').content; }catch(x){}
+    if(after&&after!=='none'&&after!=='normal'){   // ::after ist schon belegt: dann ::before nehmen, sonst Gestaltung nicht anfassen
+      let vor='none'; try{ vor=getComputedStyle(e,'::before').content; }catch(x){}
+      if(vor&&vor!=='none'&&vor!=='normal'){ e.dataset.apHit='0'; return; }
+      if(getComputedStyle(e).position==='static')e.classList.add('ap-rel'); e.classList.add('ap-hit2'); e.dataset.apHit='0'; return; }
+    if(getComputedStyle(e).position==='static')e.classList.add('ap-rel');
+    e.classList.add('ap-hit'); });
+}
+
+// ---------- Namen für VoiceOver ----------
+function apText(s){ return String(s||'').replace(/\s+/g,' ').trim().slice(0,60); }
+function apNameFuer(e){
+  if(e.placeholder)return apText(e.placeholder);
+  const td=e.closest('td,th');
+  if(td){ const tab=td.closest('table'), i=td.cellIndex, kopf=tab&&tab.tHead&&tab.tHead.rows[0]&&tab.tHead.rows[0].cells[i];
+    const zeile=td.parentElement&&td.parentElement.cells[0]&&td.parentElement.cells[0]!==td?apText(td.parentElement.cells[0].textContent):'';
+    if(kopf&&apText(kopf.textContent))return apText(kopf.textContent)+(zeile?', '+zeile:''); }
+  let v=e.previousElementSibling; for(let k=0;v&&k<2;k++,v=v.previousElementSibling){ if(/^(LABEL|SPAN|B|SMALL|STRONG|EM|H4|H5|P|DIV)$/.test(v.tagName)&&!v.querySelector('input,select,textarea,button')){ const t=apText(v.textContent); if(t&&t.length<=60)return t; } }
+  const eltern=e.parentElement; if(eltern&&/^(SPAN|DIV|P)$/.test(eltern.tagName)){ const t=apText([...eltern.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join(' ')); if(t)return t; }
+  if(e.tagName==='SELECT'){ const o=e.options[e.selectedIndex]; if(o&&o.value==='')return apText(o.textContent); }
+  if(e.type==='search')return 'Suchen';
+  if(e.name)return apText(e.name.replace(/[_-]+/g,' '));
+  return '';
+}
+function apNamen(root){
+  (root||document).querySelectorAll('input:not([type=hidden]):not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]), select, textarea').forEach(e=>{
+    if(e.getAttribute('aria-label')||e.getAttribute('aria-labelledby')||e.closest('label')||e.title)return;
+    if(e.id){ try{ if(document.querySelector(`label[for="${CSS.escape(e.id)}"]`))return; }catch(x){} }
+    const n=apNameFuer(e); if(n)e.setAttribute('aria-label',n); });
+  // Knöpfe nur mit Symbol: Name aus dem Tooltip (data-tip) übernehmen
+  (root||document).querySelectorAll('button:not([aria-label])').forEach(b=>{ if(apText(b.textContent))return; const t=b.dataset.tip||b.title; if(t)b.setAttribute('aria-label',apText(t)); });
+}
+
+// ---------- Kästchen in Tabellen: die ganze Zelle ist Tippfläche ----------
+function apZellen(root){
+  if(!apGrob())return;
+  (root||document).querySelectorAll('td input[type=checkbox], td input[type=radio]').forEach(cb=>{
+    if(cb.closest('label'))return; const td=cb.closest('td'); if(!td||td.classList.contains('ap-zelle'))return;
+    if(td.querySelectorAll('input,select,button,a,textarea').length!==1)return;
+    td.classList.add('ap-zelle'); });
+}
+function apZeilen(root){
+  if(!apGrob())return;
+  // Beschriftete Kästchen: die Beschriftung ist die Tippfläche, mindestens 44 hoch
+  (root||document).querySelectorAll('label').forEach(l=>{
+    if(l.classList.contains('ap-lab')||!l.querySelector('input[type=checkbox],input[type=radio]')||!apSicht(l))return;
+    if(l.getBoundingClientRect().height>=44)return;
+    if(getComputedStyle(l).display==='inline')l.classList.add('ap-labi');
+    l.classList.add('ap-lab'); });
+  (root||document).querySelectorAll('input[type=checkbox], input[type=radio]').forEach(cb=>{
+    if(cb.closest('label,td')||cb.id&&document.querySelector(`label[for="${CSS.escape(cb.id)}"]`))return;
+    const z=cb.parentElement; if(!z||z.classList.contains('ap-zeile')||z===document.body)return;
+    if(z.querySelectorAll('input,select,button,a,textarea').length!==1)return;
+    z.classList.add('ap-zeile'); });
+}
+document.addEventListener('click',e=>{ const z=e.target.closest&&e.target.closest('.ap-zeile'); if(!z||e.target.closest('input,select,button,a,textarea,label'))return;
+  const cb=z.querySelector('input'); if(cb&&!cb.disabled)cb.click(); },true);
+document.addEventListener('click',e=>{ const td=e.target.closest&&e.target.closest('td.ap-zelle'); if(!td||e.target.closest('input,select,button,a,textarea,label'))return;
+  const cb=td.querySelector('input'); if(cb&&!cb.disabled)cb.click(); },true);
+
+// ---------- Text nie unter 11 Punkt (auch wenn er relativ zur Umgebung kleiner wird) ----------
+function apMindest(root){
+  const P=root||document.querySelector('.panel.active')||document; if(!P)return;
+  P.querySelectorAll('small,span,em,i,b,strong,label,td,th,p,div,a,button').forEach(e=>{
+    if(AP.text.has(e))return; let t=false; for(const n of e.childNodes){ if(n.nodeType===3&&n.textContent.trim()){ t=true; break; } } if(!t)return;
+    const fs=parseFloat(getComputedStyle(e).fontSize); if(!e.getClientRects().length)return; AP.text.add(e); if(fs&&fs<10.95&&fs>=6){ e.style.fontSize='11px'; e.dataset.ap11='1'; } });
+}
+
+// ---------- Dialoge: Abbrechen links, Hauptaktion rechts ----------
+function apDialog(){
+  const M=document.getElementById('modal'); if(!M)return;
+  M.querySelectorAll('.btnrow').forEach(row=>{
+    const knoepfe=[...row.children].filter(x=>x.tagName==='BUTTON'&&apSicht(x)); if(knoepfe.length<2)return;
+    const ab=knoepfe.find(x=>/^(Abbrechen|Doch nicht|Nicht jetzt)$/i.test(apText(x.textContent))); if(!ab)return;
+    const top=knoepfe[0].offsetTop, nebeneinander=knoepfe.every(x=>Math.abs(x.offsetTop-top)<4);
+    row.classList.toggle('ap-ios',nebeneinander);
+    ab.classList.toggle('ap-abbr',nebeneinander); });
+}
+
+// ---------- Textgröße wie am iPhone (Dynamic Type) ----------
+function apTextFaktor(){
+  try{ if(localStorage.getItem('sv_textgroesse')==='aus')return 1; }catch(e){}
+  try{ if(!CSS.supports('font','-apple-system-body'))return 1;
+    const p=document.createElement('span'); p.style.cssText='font:-apple-system-body;position:absolute;visibility:hidden'; p.textContent='x'; document.body.appendChild(p);
+    const px=parseFloat(getComputedStyle(p).fontSize); p.remove(); if(!px)return 1;
+    return Math.max(1,Math.min(1.35,Math.round(px/17*20)/20));   // 17pt ist Apples Standard. Nur vergrößern, höchstens 135 %
+  }catch(e){ return 1; }
+}
+function apTextAnwenden(f){
+  AP.faktor=f==null?apTextFaktor():f;
+  const h=document.documentElement; if(AP.faktor>1.001){ h.style.zoom=String(AP.faktor); h.dataset.apText=String(AP.faktor); } else { h.style.zoom=''; delete h.dataset.apText; }
+}
+
+// ---------- Mein Konto: Schalter für die Textgröße ----------
+// Erscheinungsbild (svhell.js) hängt sich erst danach ein, darum einen Takt später
+if(typeof svAccount==='function'){ const _acc=svAccount; svAccount=function(){ const r=_acc.apply(this,arguments);
+  setTimeout(apKontoSchalter,0); return r; }; }
+function apKontoSchalter(){
+  try{ const M=document.getElementById('modal'), th=M&&M.querySelector('#thSek'); if(th&&!M.querySelector('#apTextSw')){
+      let an=true; try{ an=localStorage.getItem('sv_textgroesse')!=='aus'; }catch(e){}
+      const d=document.createElement('label'); d.className='ap-sw'; d.innerHTML=`<input type="checkbox" id="apTextSw"${an?' checked':''}><span><b>Textgröße vom Gerät übernehmen</b><small>Hast du am iPhone größeren Text eingestellt, wird auch die App größer.</small></span>`;
+      th.appendChild(d); d.querySelector('input').onchange=e=>{ try{ localStorage.setItem('sv_textgroesse',e.target.checked?'an':'aus'); }catch(x){} apTextAnwenden(); }; } }catch(e){}
+}
+
+// ---------- Laufend anwenden ----------
+function apAlles(root){ try{ apNamen(root); }catch(e){} try{ apTippflaechen(root); }catch(e){} try{ apZellen(root); }catch(e){} try{ apZeilen(root); }catch(e){} try{ apMindest(); }catch(e){} try{ apDialog(); }catch(e){} }
+function apBald(){ if(AP.t)return; AP.t=setTimeout(()=>{ AP.t=null; apAlles(); },250); }
+(function(){ const go=()=>{ apTextAnwenden(); apAlles();
+    try{ AP.mo=new MutationObserver(m=>{ if(m.some(x=>x.addedNodes.length))apBald(); }); AP.mo.observe(document.body,{childList:true,subtree:true}); }catch(e){}
+    addEventListener('resize',apBald); };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go); else go(); })();
+{ const _gt=goTab; goTab=function(){ const r=_gt.apply(this,arguments); apBald(); return r; }; }
+
+(function(){ try{ const s=document.createElement('style'); s.id='svm59css'; s.textContent="/* Feinschliff nach Apples Human Interface Guidelines (Beta 0.62) */\n/* Schwächste Textfarbe: Kontrast mindestens 4,5:1 auf allen Flächen */\n:root:root{--ink3:#8d96ab}\nhtml[data-theme=\"hell\"]:root{--ink3:#4d5668}\n/* Aktive Segmente: Weiß auf kräftigerem Blau (5,2:1 statt 2,8:1) */\n.k1-seg button.on,.st-bf button.on,.st-mf button.on{background:#2563eb!important}\n\n/* Tippflächen mindestens 44 x 44, ohne das Aussehen zu ändern */\n@media (pointer:coarse){\n  .ap-rel{position:relative}\n  .ap-hit::after{content:\"\";position:absolute;left:50%;top:50%;width:max(100%,44px);height:max(100%,44px);transform:translate(-50%,-50%);background:transparent}\n  .ap-hit2::before{content:\"\";position:absolute;left:50%;top:50%;width:max(100%,44px);height:max(100%,44px);transform:translate(-50%,-50%);background:transparent}\n  /* Eingabefelder: 44 hoch und 16px Schrift, damit das iPhone beim Antippen nicht hineinzoomt */\n  input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]):not([type=file]),select,textarea{min-height:44px!important;font-size:max(16px,1em)}\n  input[type=checkbox],input[type=radio]{min-width:22px;min-height:22px}\n  td.ap-zelle{cursor:pointer;min-width:44px;height:44px}\n  .ap-zeile{cursor:pointer;min-height:44px}\n  label.ap-lab{min-height:44px}\n  label.ap-labi{display:inline-flex;align-items:center;gap:6px}\n}\n\n/* Dialoge: Abbrechen links, Hauptaktion rechts, wenn die Knöpfe nebeneinander stehen */\n#modal .btnrow.ap-ios{display:flex;justify-content:flex-end}\n#modal .btnrow.ap-ios .ap-abbr{order:-1;margin-right:auto}\n\n/* Schalter Textgröße in Mein Konto */\n.ap-sw{display:flex;gap:12px;align-items:flex-start;margin-top:14px;cursor:pointer;min-height:44px}\n.ap-sw input{flex:none;width:22px;height:22px;margin-top:2px;accent-color:var(--accent)}\n.ap-sw span{display:grid;gap:2px}\n.ap-sw b{font-size:15px;font-weight:650}\n.ap-sw small{font-size:13px;color:var(--ink2);line-height:1.4}\n\n/* Weniger Bewegung: Animationen und Übergänge fast ganz aus, wenn am Gerät eingestellt */\n@media (prefers-reduced-motion:reduce){\n  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}\n}\n\n/* Fokus für Tastatur und Schalterbedienung immer sichtbar */\n:focus-visible{outline:2px solid var(--accent);outline-offset:2px}\n\n/* Einzelne Stellen mit zu wenig Kontrast */\n.pk-seg button.on{color:#141a2e}\nhtml[data-theme=\"hell\"] .k1-ann{color:#7a5200;border-color:color-mix(in srgb,#7a5200 50%,transparent)}\nhtml[data-theme=\"hell\"] .linkbox code{color:#1e3a8a;background:rgba(40,48,72,.06)}\nhtml[data-theme=\"hell\"] .trai-steps code{color:#1e3a8a!important;background:rgba(40,48,72,.06)!important}\n/* Partner-Steuerung: aktiver Unterreiter auch im hellen Modus gut lesbar */\n.pe-sub button.on{background:#2563eb!important;color:#fff!important;border-color:transparent!important}\n"; document.head.appendChild(s); }catch(e){} })();
+/* =====================================================================
+   Sportzentrale Beta 0.63 · Weiche für die Store-Apps (iPhone, Android) und „Konto löschen“
+   Die Web-App läuft unverändert weiter. In der Store-App (Capacitor) kommen dazu:
+   - Mitteilungen über Apple (APNs) und Google (FCM) statt Web-Push, mit denselben Knöpfen in der App
+   - Tipp auf eine Mitteilung öffnet genau die Meldung
+   - Entsperren mit Face ID oder Fingerabdruck (abschaltbar, nur wenn das Gerät es kann)
+   - Teilen über das Teilen-Menü des Telefons, spürbares Tippen auch am iPhone
+   - Links nach außen zeigen immer auf https://svbsc.kaderwerk.pro (svBasis in boot.js)
+   Für alle (Web und App): Konto selbst löschen unter Mein Konto (Apple Richtlinie 5.1.1).
+   ===================================================================== */
+const SVN={nativ:false,plattform:'web',plug:{},token:null,gesperrt:false};
+try{ const C=window.Capacitor; SVN.nativ=!!(C&&C.isNativePlatform&&C.isNativePlatform()); SVN.plattform=SVN.nativ&&C.getPlatform?C.getPlatform():'web'; SVN.plug=(C&&C.Plugins)||{}; }catch(e){}
+const svnLs=(k,v)=>{ try{ if(v===undefined)return localStorage.getItem(k); if(v===null)localStorage.removeItem(k); else localStorage.setItem(k,v); }catch(e){ return null; } };
+
+if(SVN.nativ){
+  document.documentElement.classList.add('nativ','nativ-'+SVN.plattform);
+
+  // ---------- Updates in der Store-App (Beta 0.65) ----------
+  // Die Dateien liegen in der App selbst. Neue Versionen holt der Capgo-Updater still im Hintergrund (Funktion app-ota),
+  // sie gelten ab dem nächsten Öffnen. Service Worker und version.json-Abfrage der Web-App sind hier aus.
+  appRegisterSW=function(){};
+  appCheckUpdate=async function(){ return null; };
+  try{ const U=SVN.plug.CapacitorUpdater; if(U&&U.notifyAppReady){ const ok=()=>{ try{ U.notifyAppReady(); }catch(e){} };
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ok); else ok(); } }catch(e){}
+
+  // ---------- Mitteilungen über APNs/FCM ----------
+  const PN=()=>SVN.plug.PushNotifications;
+  svPushState=async function(){ const P=PN(); if(!P)return 'unsupported';
+    try{ const p=await P.checkPermissions(); if(p.receive==='denied')return 'denied'; if(p.receive!=='granted')return 'off'; }catch(e){ return 'off'; }
+    const t=svnLs('sv_push_token'); if(!t)return 'off';
+    try{ const {data}=await SVB.sb.from('push_native').select('token').eq('token',t).maybeSingle(); return data?'on':'off'; }catch(e){ return 'off'; } };
+  svPushOn=async function(){ const P=PN(); if(!P){ kToast('Mitteilungen sind in dieser App-Version nicht eingerichtet.'); return false; }
+    let p=await P.checkPermissions(); if(p.receive!=='granted')p=await P.requestPermissions();
+    if(p.receive!=='granted'){ svPushHelp('denied'); return false; }
+    const token=await new Promise((ok,nein)=>{ let fertig=false; const t=setTimeout(()=>{ if(!fertig)nein(new Error('Das Telefon hat keine Adresse für Mitteilungen geliefert')); },15000);
+      P.addListener('registration',r=>{ fertig=true; clearTimeout(t); ok(r.value); });
+      P.addListener('registrationError',e=>{ fertig=true; clearTimeout(t); nein(new Error('Anmelden für Mitteilungen fehlgeschlagen')); });
+      P.register(); });
+    const {error}=await SVB.sb.rpc('push_nativ_anmelden',{p_token:token,p_plattform:SVN.plattform==='ios'?'ios':'android',p_version:String(typeof APP_BUILD!=='undefined'?APP_BUILD:'')});
+    if(error)throw new Error('Anmelden fehlgeschlagen');
+    svnLs('sv_push_token',token);
+    try{ await svPushTest(); kToast('🔔 Mitteilungen sind an. Gleich kommt eine Test-Mitteilung'); }catch(e){ kToast('🔔 Mitteilungen sind an'); }
+    return true; };
+  svPushOff=async function(){ const t=svnLs('sv_push_token'); try{ if(t)await SVB.sb.rpc('push_nativ_abmelden',{p_token:t}); }catch(e){}
+    try{ const P=PN(); if(P&&P.unregister)await P.unregister(); }catch(e){} svnLs('sv_push_token',null);
+    kToast('🔕 Mitteilungen auf diesem Gerät ausgeschaltet'); };
+  // Tipp auf eine Mitteilung: Link aus der Nachricht öffnen (./#meldung=…)
+  // Knopf Ja oder Nein in der Mitteilung (Beta 0.99.4): actionId SVBC_JA / SVBC_NEIN, dazu die Frage aus den Daten.
+  // Android schickt die Antwort als Adresse (#frage=<id>:ja), weil die Knöpfe dort der Empfangsdienst der App baut.
+  try{ const P=PN(); if(P){ P.addListener('pushNotificationActionPerformed',a=>{ try{
+      const d=(a&&a.notification&&a.notification.data)||{}; const act=String((a&&a.actionId)||'');
+      const w=act==='SVBC_JA'?'ja':act==='SVBC_NEIN'?'nein':null;
+      if(w&&d.frage&&typeof svZiel==='function'){ svZiel('frage='+String(d.frage)+':'+w,'push'); return; }
+      const u=d.url||''; const h=String(u).replace(/^\.\//,'');
+      if(/^#frage=/.test(h)&&typeof svZiel==='function'){ svZiel(h.slice(1),'push'); return; }
+      if(/^#meldung=[\d,]+$/.test(h)&&typeof svZiel==='function'){ try{ if(typeof svzMerkzettel==='function')svzMerkzettel(); }catch(x){} svZiel(h.slice(1),'push'); }
+      else if(/^#[a-z]+$/.test(h))location.hash=h; }catch(e){} }); } }catch(e){}
+
+  // ---------- Teilen und Tippen ----------
+  const SH=SVN.plug.Share;
+  if(SH&&SH.share){ const alt=navigator.share&&navigator.share.bind(navigator);
+    navigator.share=async d=>{ d=d||{}; if(d.files&&d.files.length){ if(alt)return alt(d); throw Object.assign(new Error('Dateien teilen geht hier nicht'),{name:'NotAllowedError'}); }
+      try{ await SH.share({title:d.title||'',text:d.text||'',url:d.url||undefined,dialogTitle:'Teilen'}); }catch(e){ if(/cancel/i.test(String(e&&e.message)))throw Object.assign(new Error('abgebrochen'),{name:'AbortError'}); throw e; } }; }
+  const HP=SVN.plug.Haptics;
+  if(HP&&typeof svHaptic==='function'){ svHaptic=function(kind){ try{ if((typeof sv43Reduced==='function'&&sv43Reduced())||(typeof sv43HapOn==='function'&&!sv43HapOn()))return;
+      if(kind==='success'||kind==='warn')HP.notification({type:kind==='success'?'SUCCESS':'WARNING'}); else HP.impact({style:kind==='medium'?'MEDIUM':'LIGHT'}); }catch(e){} }; }
+
+  // ---------- Entsperren mit Face ID oder Fingerabdruck ----------
+  const BIO=()=>SVN.plug.NativeBiometric;
+  async function svnBioVerfuegbar(){ try{ const B=BIO(); if(!B)return false; const r=await B.isAvailable(); return !!(r&&r.isAvailable); }catch(e){ return false; } }
+  async function svnEntsperren(){
+    if(svnLs('sv_bio')!=='an'||SVN.gesperrt)return; const B=BIO(); if(!B)return;
+    SVN.gesperrt=true; let w=document.getElementById('svnSperre');
+    if(!w){ w=document.createElement('div'); w.id='svnSperre'; w.setAttribute('role','dialog'); w.setAttribute('aria-modal','true'); w.setAttribute('aria-label','App gesperrt');
+      w.innerHTML=`<div class="svn-sp"><img src="icon-192.png" alt="" width="72" height="72"><h2>Sportzentrale</h2><p>Zum Öffnen entsperren.</p><button type="button" class="btn" id="svnAuf">Entsperren</button></div>`;
+      document.body.appendChild(w); w.querySelector('#svnAuf').onclick=()=>pruefen(); }
+    w.hidden=false;
+    async function pruefen(){ try{ await B.verifyIdentity({reason:'Sportzentrale entsperren',title:'Sportzentrale',subtitle:'',description:''}); w.hidden=true; SVN.gesperrt=false; }catch(e){ /* bleibt gesperrt, Knopf erneut */ } }
+    pruefen();
+  }
+  const APP=SVN.plug.App;
+  try{ if(APP){ let weg=0; APP.addListener('appStateChange',s=>{ if(!s.isActive)weg=Date.now(); else if(weg&&Date.now()-weg>60000)svnEntsperren(); }); } }catch(e){}
+  // Android öffnet die App über eine Adresse: Knopf Ja oder Nein in der Mitteilung (#frage=<id>:ja), später auch Links von der Webseite
+  try{ if(APP)APP.addListener('appUrlOpen',ev=>{ try{ const h=String((ev&&ev.url)||'').split('#')[1]||''; if(h&&typeof svZiel==='function')svZiel(h,'push'); }catch(e){} }); }catch(e){}
+  // Eine Frage kommt an, während die App offen ist: gleich oben auf der Startseite zeigen
+  try{ const P=PN(); if(P)P.addListener('pushNotificationReceived',n=>{ try{ if(n&&n.data&&n.data.frage&&typeof frLaden==='function')frLaden(true).then(()=>{ try{ frKarte(); }catch(e){} }); }catch(e){} }); }catch(e){}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>svnEntsperren()); else svnEntsperren();
+  SVN.bioVerfuegbar=svnBioVerfuegbar; SVN.entsperren=svnEntsperren;
+}
+
+// ---------- Mein Konto: Face ID (nur App) und Konto löschen (überall) ----------
+{ const _acc=svAccount; svAccount=function(){ const r=_acc.apply(this,arguments); setTimeout(svnKonto,0); return r; }; }
+async function svnKonto(){
+  const M=document.getElementById('modal'); if(!M||M.querySelector('#svnLoeschSek'))return;
+  const app=[...M.querySelectorAll('.editsec')].find(s=>/^App/.test((s.querySelector('h4')||{}).textContent||''));
+  if(SVN.nativ&&SVN.bioVerfuegbar&&await SVN.bioVerfuegbar()&&!M.querySelector('#svnBio')){
+    const d=document.createElement('label'); d.className='ap-sw'; d.innerHTML=`<input type="checkbox" id="svnBio"${svnLs('sv_bio')==='an'?' checked':''}><span><b>Mit Face ID oder Fingerabdruck sperren</b><small>Nach einer Minute im Hintergrund fragt die App beim Öffnen danach.</small></span>`;
+    (app||M).appendChild(d); d.querySelector('input').onchange=e=>svnLs('sv_bio',e.target.checked?'an':'aus'); }
+  const s=document.createElement('div'); s.className='editsec'; s.id='svnLoeschSek';
+  s.innerHTML=`<h4>Konto löschen</h4><p class="note">Löscht dein Konto und deine Anmeldung dauerhaft. Was du für den Verein eingetragen hast (zum Beispiel Trainings oder Aufgaben), bleibt ohne deinen Namen erhalten.</p>
+    <button type="button" class="btn ghost svn-rot" id="svnLoesch">${SVI('trash')} Konto löschen …</button>`;
+  M.appendChild(s); s.querySelector('#svnLoesch').onclick=svnLoeschenDialog;
+}
+function svnLoeschenDialog(){
+  const M=svModal(`<div class="og-form"><h2>Konto wirklich löschen?</h2>
+    <p>Das lässt sich nicht rückgängig machen. Du wirst abgemeldet und kannst die Sportzentrale erst wieder nutzen, wenn dich jemand neu einlädt.</p>
+    <label class="svn-best"><span>Zur Bestätigung <b>LÖSCHEN</b> eingeben</span><input id="svnBest" autocomplete="off" autocapitalize="characters" spellcheck="false"></label>
+    <p class="note" id="svnFehler" role="alert" hidden></p>
+    <div class="btnrow sbact"><button type="button" class="btn svn-rotvoll" id="svnJa" disabled>Konto löschen</button><button type="button" class="btn ghost" id="svnNein">Abbrechen</button></div></div>`);
+  const i=M.querySelector('#svnBest'), ja=M.querySelector('#svnJa'), f=M.querySelector('#svnFehler');
+  i.oninput=()=>{ ja.disabled=i.value.trim().toUpperCase()!=='LÖSCHEN'; };
+  M.querySelector('#svnNein').onclick=()=>closeOverlay();
+  ja.onclick=async()=>{ ja.disabled=true; ja.textContent='Wird gelöscht …'; f.hidden=true;
+    try{ const {data,error}=await SVB.sb.functions.invoke('admin-users',{body:{action:'selbst_loeschen',bestaetigung:'LÖSCHEN',app_url:typeof svBasis==='function'?svBasis():''}});
+      let msg=data&&data.error; if(error&&!msg){ try{ msg=(await error.context.json()).error; }catch(x){} }
+      if(error||!data||!data.ok)throw new Error(msg||'Das Konto konnte gerade nicht gelöscht werden.');
+      try{ if(SVN.nativ)await svPushOff(); }catch(x){}
+      try{ await SVB.sb.auth.signOut(); }catch(x){}
+      try{ localStorage.clear(); sessionStorage.clear(); }catch(x){}
+      svModal('<div class="og-form"><h2>Dein Konto ist gelöscht</h2><p>Danke für deine Zeit im Team.</p></div>');
+      setTimeout(()=>location.reload(),2500);
+    }catch(e){ f.textContent=e.message||String(e); f.hidden=false; ja.disabled=false; ja.textContent='Konto löschen'; } };
+  setTimeout(()=>i.focus(),60);
+}
+
+(function(){ try{ const s=document.createElement('style'); s.id='svm60css'; s.textContent="/* Store-Apps: Sperrbildschirm, Konto löschen */\n#svnSperre{position:fixed;inset:0;z-index:2147483000;background:#05070c;display:grid;place-items:center;padding:24px;padding-top:max(24px,env(safe-area-inset-top))}\n#svnSperre[hidden]{display:none!important}\n.svn-sp{display:grid;justify-items:center;gap:12px;text-align:center;color:#eef2f8}\n.svn-sp img{border-radius:22.37%}\n.svn-sp h2{margin:6px 0 0;font-size:22px;font-weight:750;letter-spacing:-.02em}\n.svn-sp p{margin:0;color:#a2acbf;font-size:15px}\n.svn-sp .btn{min-width:200px;min-height:48px;margin-top:10px}\n.btn.svn-rot{color:#f87171!important;border-color:color-mix(in srgb,#f87171 40%,transparent)!important}\nhtml[data-theme=\"hell\"] .btn.svn-rot{color:#b91c1c!important}\n.btn.svn-rotvoll{background:#dc2626!important;color:#fff!important;border-color:transparent!important}\n.btn.svn-rotvoll:disabled{opacity:.45}\n.svn-best{display:grid;gap:6px;margin:14px 0 4px;font-size:14px}\n.svn-best input{min-height:44px;padding:8px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface2);color:var(--ink);font:inherit;font-size:16px;letter-spacing:.06em}\n/* In der App: kein Hinweis „zum Homescreen hinzufügen“ */\nhtml.nativ .installcard,html.nativ #appInstall{display:none!important}\n"; document.head.appendChild(s); }catch(e){} })();
+//---------------------------------------------------------------------
+//
+// QR Code Generator for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//  http://www.opensource.org/licenses/mit-license.php
+//
+// The word 'QR Code' is registered trademark of
+// DENSO WAVE INCORPORATED
+//  http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+
+var qrcode = function() {
+
+  //---------------------------------------------------------------------
+  // qrcode
+  //---------------------------------------------------------------------
+
+  /**
+   * qrcode
+   * @param typeNumber 1 to 40
+   * @param errorCorrectionLevel 'L','M','Q','H'
+   */
+  var qrcode = function(typeNumber, errorCorrectionLevel) {
+
+    var PAD0 = 0xEC;
+    var PAD1 = 0x11;
+
+    var _typeNumber = typeNumber;
+    var _errorCorrectionLevel = QRErrorCorrectionLevel[errorCorrectionLevel];
+    var _modules = null;
+    var _moduleCount = 0;
+    var _dataCache = null;
+    var _dataList = [];
+
+    var _this = {};
+
+    var makeImpl = function(test, maskPattern) {
+
+      _moduleCount = _typeNumber * 4 + 17;
+      _modules = function(moduleCount) {
+        var modules = new Array(moduleCount);
+        for (var row = 0; row < moduleCount; row += 1) {
+          modules[row] = new Array(moduleCount);
+          for (var col = 0; col < moduleCount; col += 1) {
+            modules[row][col] = null;
+          }
+        }
+        return modules;
+      }(_moduleCount);
